@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "docsubstrate-a0-review"
+version = "0.0.0"
+description = "Research implementation of an application-neutral institutional document substrate"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [
+  { name = "DocSubstrate contributors" }
+]
+maintainers = [
+  { name = "Zen (Chen-Yu) Hsieh" }
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = []
+
+[project.optional-dependencies]
+jwe = [
+  "cryptography>=42",
+]
+a0-review = [
+  "cryptography>=42",
+  "jwcrypto>=1.6",
+  "pytest>=8",
+  "ruff>=0.6",
+]
+
+[project.urls]
+Repository = "https://github.com/docsubstrate/docsubstrate"
+Issues = "https://github.com/docsubstrate/docsubstrate/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/docsubstrate"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint.per-file-ignores]
+# Decoded JSON with the wrong shape is invalid serialized data, so these
+# public parsing APIs intentionally keep their established ValueError contract.
+"src/docsubstrate/interchange_json.py" = ["TRY004"]
+"src/docsubstrate/physical_package.py" = ["TRY004"]
+"tools/closure_report.py" = ["TRY004"]
+"tools/independent_reader.py" = ["TRY004"]

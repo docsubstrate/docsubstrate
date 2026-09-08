@@ -1,0 +1,11 @@
+DocSubstrate A0
+Copyright 2026 DocSubstrate contributors
+
+This NOTICE applies to this bounded A0 public source and to review artifacts
+generated from it. It does not expand a generated artifact's source allowlist
+or publication authority beyond its manifest.
+
+The initial public history was prepared from the independently reviewed A0
+source snapshot `21268b03a09fe44c6a270c50e8ef8a6ce1981227`. The deterministic
+review ZIP used for that promotion had SHA-256
+`97ff4aa5a317236c7dfce5ca7977b0575148c2134b2f2f3d64d269c6c949d6f5`.
