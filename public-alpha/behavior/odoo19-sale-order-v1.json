@@ -1,0 +1,45 @@
+{
+  "fallback_contract": {
+    "default_policy": "qweb",
+    "invalid_or_unsupported_engine_configuration": "raise",
+    "producer_failure": "raise",
+    "uncertified_report": "odoo-native-fallback"
+  },
+  "input": {
+    "cardinality": "exactly-one",
+    "model": "sale.order",
+    "report_action": "sale.report_saleorder"
+  },
+  "nonclaims": [
+    "arbitrary-qweb-css-compatibility",
+    "all-odoo-report-actions",
+    "all-odoo-lifecycle-entry-points",
+    "live-operator-number-wrap-closure",
+    "pdf-conformance-validation",
+    "production-performance"
+  ],
+  "output": {
+    "media_type": "application/pdf",
+    "minimum_pdf_header": "1.4",
+    "producer": "reportlab"
+  },
+  "required_observations": {
+    "fallback": false,
+    "network_access": false,
+    "qweb_evaluated": false,
+    "subprocess_started": false,
+    "wkhtmltopdf_started": false
+  },
+  "schema": "docsubstrate.public-alpha-behavior/v1",
+  "scope": {
+    "accepted_render_policies": [
+      "qweb",
+      "reportlab"
+    ],
+    "layout": "standard",
+    "mode": "record-native",
+    "odoo_edition": "Community",
+    "odoo_version": "19.0"
+  },
+  "synthetic_fixture_schema": "docsubstrate.public-alpha-sale-order/v1"
+}

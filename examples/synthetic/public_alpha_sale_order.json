@@ -1,0 +1,71 @@
+{
+  "document": {
+    "currency": "USD",
+    "customer_address": {
+      "lines": [
+        "100 Example Avenue",
+        "Sample City 00000",
+        "Exampleland"
+      ],
+      "name": "Example Buyer Cooperative"
+    },
+    "customer_name": "Example Buyer Cooperative",
+    "date": "2030-01-15",
+    "display_title": "Quotation # SO-ALPHA-000123",
+    "id": "sale-order.synthetic.alpha-001",
+    "lines": [
+      {
+        "description": "Calibration fixture",
+        "id": "line.synthetic.1",
+        "quantity": "2",
+        "subtotal": "250.00",
+        "taxes_label": "Example tax 5%",
+        "unit_price": "125.00",
+        "uom": "Units"
+      },
+      {
+        "description": "Ordinary prose is intentionally allowed to wrap when its containing column is narrow.",
+        "id": "line.synthetic.2",
+        "quantity": "1",
+        "subtotal": "50.00",
+        "taxes_label": null,
+        "unit_price": "50.00",
+        "uom": "Service"
+      }
+    ],
+    "note": "Generated demonstration only. No person, tenant, or customer record is represented.",
+    "number": "SO-ALPHA-000123",
+    "payment_terms": "Payment due within 30 days.",
+    "salesperson": "Synthetic Operator",
+    "seller_name": "Example Maker Laboratory",
+    "shipping_address": {
+      "lines": [
+        "200 Demonstration Road",
+        "Sample City 00001",
+        "Exampleland"
+      ],
+      "name": "Example Receiving Dock"
+    },
+    "tax_amount": "15.00",
+    "tax_groups": [
+      {
+        "amount": "15.00",
+        "amount_text": "15.00",
+        "name": "Example tax 5%"
+      }
+    ],
+    "total_amount": "315.00",
+    "untaxed_amount": "300.00",
+    "validity_date": "2030-02-15"
+  },
+  "expected_text": [
+    "Quotation # SO-ALPHA-000123",
+    "Example Buyer Cooperative",
+    "Calibration fixture",
+    "315.00 USD"
+  ],
+  "layout": "standard",
+  "report_action": "sale.report_saleorder",
+  "schema": "docsubstrate.public-alpha-sale-order/v1",
+  "synthetic_only": true
+}

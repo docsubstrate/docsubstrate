@@ -1,0 +1,55 @@
+{
+  "schema": "docsubstrate.public-odoo19-stylesheet-inputs/v1",
+  "scope": "bounded Odoo 19 Community sale.report_saleorder profile",
+  "upstream": {
+    "repository": "https://github.com/odoo/odoo",
+    "revision": "ca6a579d23798cd04a6023e6937d2bab8292a5c7",
+    "revision_url": "https://github.com/odoo/odoo/commit/ca6a579d23798cd04a6023e6937d2bab8292a5c7",
+    "license_file_url": "https://raw.githubusercontent.com/odoo/odoo/ca6a579d23798cd04a6023e6937d2bab8292a5c7/LICENSE",
+    "license_metadata": "LGPL-3.0-only",
+    "license_file_sha256": "abc09dad5f84a76e1b0279237053cae16c03228ab27d8d467677054c2bd17eeb",
+    "revision_anchor_path": "addons/web/static/src/webclient/actions/reports/reset.min.css",
+    "revision_anchor_sha256": "a15383b2e13541a641a0344a046ec32e892911d46ae061faeaafa9dd8d447d2f"
+  },
+  "odoo_image": "odoo:19.0",
+  "odoo_image_id": "sha256:b035658c87344395df999c4ad196dd81e25be7a2e3c94cad4b87b87588afc939",
+  "odoo_image_digest": "odoo@sha256:f99ffac95cb39a0924622ea4118481c95651d9c84187e5b30a21c2cc4419c7dd",
+  "odoo_release": "19.0-20260817",
+  "installed_module": "sale_stock",
+  "demo_records": false,
+  "extractor": "tools/extract_public_odoo19_stylesheets.py",
+  "dynamic_asset_sources": [
+    {
+      "path": "addons/web/models/models.py",
+      "sha256": "4a840ed22457a5564faf45f066975860281af5660a02d7b42ca4f82442fbeb1d"
+    },
+    {
+      "path": "addons/web/views/report_templates.xml",
+      "sha256": "e84321ab6dfcd2716f7f5dcbae7b28e021c61a6799e677b2709e93c7f1fc090d"
+    },
+    {
+      "path": "addons/web/data/report_layout.xml",
+      "sha256": "a488d1b0131e43dd28d4230769e546793b2d153d411d481a93473dc1d65b11ba"
+    }
+  ],
+  "source_map": {
+    "path": "public-alpha/odoo19-stylesheet-source-map.json",
+    "sha256": "ab6eb91c1ebf61d64b6a69b2e3aaa109efcfb628de9a01e936821712283ce716"
+  },
+  "outputs": [
+    {
+      "path": "tests/data/web.report_assets_common.min.css",
+      "sha256": "e156b4b3f98a5ac7067d3822ed3186989305586185e08e0b23251f795f2551ca",
+      "bytes": 418806
+    },
+    {
+      "path": "tests/data/web.report_assets_pdf.min.css",
+      "sha256": "c985e35d6596d92503f93d4a5d6b2ae95cceefc736aa185b8ea4e390eb5b3038",
+      "bytes": 1828
+    }
+  ],
+  "claims": {
+    "legal_clearance": null,
+    "publication_readiness": null
+  }
+}

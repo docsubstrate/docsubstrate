@@ -1,0 +1,47 @@
+DocSubstrate
+Copyright DocSubstrate contributors
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This distribution (the ``docsubstrate`` core wheel/sdist built from the
+allowlist in ``pyproject.toml``) contains generated compatibility tables for
+the bounded Odoo 19 sale-order profile. Their Odoo source inputs and source
+map are retained at the LGPL boundary in the separately versioned
+``docsubstrate/odoo-adapter`` repository. The source files themselves, fonts,
+and Odoo runtime are not bundled in the core distribution. The core runtime
+dependency list remains empty (see ``pyproject.toml``).
+
+The following external components are relevant to this project's broader
+scope (the optional ReportLab rendering engine adapter and the separate,
+LGPL-boundary Odoo addon in ``integrations/odoo/addons/docsubstrate_report``).
+They are not bundled by this core distribution. Each is installed separately
+by whoever chooses to use it, under its own upstream terms:
+
+- Odoo Community 19.0 (LGPL-3.0) -- the required external runtime and API
+  host for the separate Odoo addon. Not bundled.
+- ReportLab 5.0.1 (BSD) -- the pinned PDF rendering dependency used by the
+  included ``docsubstrate.renderers.reportlab_canvas`` and
+  ``docsubstrate.engine_adapters.reportlab`` modules. It is not bundled in the
+  core wheel; the public Odoo release assembler stages its exact verified
+  wheel into the addon's managed ``lib/`` directory. Stock Odoo's ambient
+  ReportLab 4.1.0 is not the certified alpha renderer.
+- Pillow (MIT-CMU) -- ReportLab's own image-decoding dependency. Not
+  bundled; the exact version pinned by stock Odoo 19 on Python 3.12 is
+  10.2.0.
+- charset-normalizer (MIT) -- a transitive dependency of this project's own
+  clean-install tooling. Not bundled.
+- psycopg2 (LGPL-3.0-or-later, with an OpenSSL linking exception) -- the
+  Odoo addon's PostgreSQL driver, provided by the Odoo host environment.
+  Not bundled.
+- wkhtmltopdf / the WebKit component it embeds (component-specific GNU
+  Library GPL terms in the referenced WebCore files) -- Odoo's existing
+  fallback PDF renderer. Not bundled or invoked by the alpha's successful
+  record-native route.
+
+See ``SBOM.json`` for the machine-readable form of this list. Exact core
+distribution membership is enforced by ``pyproject.toml``. The separate Odoo
+adapter repository carries its own addon manifest and LGPL notice boundary.
+
+The generated profile and its source map are engineering records, not a legal
+conclusion. This NOTICE makes no ownership, right-to-license, or publication
+approval determination; those remain separate owner/counsel gates.

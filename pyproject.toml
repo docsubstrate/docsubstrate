@@ -1,0 +1,158 @@
+[build-system]
+requires = ["hatchling==1.32.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "docsubstrate"
+version = "0.1.0a1"
+description = "Vendor-neutral substrate for durable institutional semantics"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "DocSubstrate contributors" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+reportlab = [
+  "reportlab==5.0.1",
+]
+dev = [
+  "pytest>=8",
+  "ruff>=0.6",
+  "reportlab==5.0.1",
+  # Reading Odoo's report stylesheet. A build- and test-time dependency only:
+  # `tools/derive_table_skins.py` compiles the bundle into
+  # `odoo_report_theme.TABLE_SKINS`, and the test suite re-runs it to check
+  # the table still describes the CSS. Rendering a PDF never parses CSS, so
+  # deployments do not install this.
+  "tinycss2>=1.3",
+  # Reading back the PDFs this engine and wkhtmltopdf produce, which is how
+  # every fidelity claim here is checked: `tools/compare_pdf.py` is the ruler
+  # and several tests measure their own output with it. Undeclared until now,
+  # so the suite passed only where something else had pulled it in.
+  "pdfminer.six>=20231228",
+]
+
+[tool.hatch.build.targets.wheel]
+# A2 public-alpha narrow packaging closure: an exact allowlist, not
+# `packages = ["src/docsubstrate"]` (which included every file under the
+# directory, including material the independent audit has not cleared for
+# publication). The exact membership and local import closure are enforced by
+# tests/test_a2_wheel_membership.py::test_wheel_allowlist_contains_complete_local_import_closure.
+#
+# The list is the complete import closure of the bounded record-native sale
+# order renderer. Research and parser surfaces outside that path remain out;
+# type-only imports do not create a runtime dependency.
+include = [
+  "CODE-PROVENANCE.json",
+  "SECURITY.md",
+  "src/docsubstrate/__init__.py",
+  "src/docsubstrate/commerce.py",
+  "src/docsubstrate/commerce_relations.py",
+  "src/docsubstrate/content.py",
+  "src/docsubstrate/context.py",
+  "src/docsubstrate/documents.py",
+  "src/docsubstrate/engines.py",
+  "src/docsubstrate/font_faces.py",
+  "src/docsubstrate/horizontal_geometry.py",
+  "src/docsubstrate/image_assets.py",
+  "src/docsubstrate/ir.py",
+  "src/docsubstrate/materialization.py",
+  "src/docsubstrate/model.py",
+  "src/docsubstrate/odoo_report_profile.py",
+  "src/docsubstrate/odoo_report_theme.py",
+  "src/docsubstrate/page_planner.py",
+  "src/docsubstrate/pageplan.py",
+  "src/docsubstrate/postprocess.py",
+  "src/docsubstrate/provenance.py",
+  "src/docsubstrate/relations.py",
+  "src/docsubstrate/render_baseline.py",
+  "src/docsubstrate/semantics.py",
+  "src/docsubstrate/snapshots.py",
+  "src/docsubstrate/structure_policies.py",
+  "src/docsubstrate/svg_path.py",
+  "src/docsubstrate/table_layout.py",
+  "src/docsubstrate/text_provenance.py",
+  "src/docsubstrate/engine_adapters/__init__.py",
+  "src/docsubstrate/engine_adapters/reportlab.py",
+  "src/docsubstrate/renderers/base.py",
+  "src/docsubstrate/renderers/encoded_image_store.py",
+  "src/docsubstrate/renderers/reportlab_canvas.py",
+]
+exclude = [
+  "integrations/odoo/addons/docsubstrate_report/SECURITY.md",
+]
+
+[tool.hatch.build.targets.wheel.sources]
+src = ""
+
+[tool.hatch.build.targets.sdist]
+# `only-include`, not `include`: hatchling's sdist target otherwise falls
+# back to "every VCS-tracked file", which silently re-admitted
+# public-alpha/candidate-evidence material and the addon's own NOTICE on
+# the first build here. `only-include` replaces that default outright, so
+# this is the same true exact allowlist as the wheel, plus the
+# packaging/notice/evidence surfaces a source distribution conventionally
+# carries. The two public-alpha verification entry points and their exact
+# synthetic inputs are included because CLEAN-INSTALL.md invokes them from
+# an unpacked sdist. No test or integrations/ path is included.
+only-include = [
+  "CODE-PROVENANCE.json",
+  "src/docsubstrate/__init__.py",
+  "src/docsubstrate/commerce.py",
+  "src/docsubstrate/commerce_relations.py",
+  "src/docsubstrate/content.py",
+  "src/docsubstrate/context.py",
+  "src/docsubstrate/documents.py",
+  "src/docsubstrate/engines.py",
+  "src/docsubstrate/font_faces.py",
+  "src/docsubstrate/horizontal_geometry.py",
+  "src/docsubstrate/image_assets.py",
+  "src/docsubstrate/ir.py",
+  "src/docsubstrate/materialization.py",
+  "src/docsubstrate/model.py",
+  "src/docsubstrate/odoo_report_profile.py",
+  "src/docsubstrate/odoo_report_theme.py",
+  "src/docsubstrate/page_planner.py",
+  "src/docsubstrate/pageplan.py",
+  "src/docsubstrate/postprocess.py",
+  "src/docsubstrate/provenance.py",
+  "src/docsubstrate/relations.py",
+  "src/docsubstrate/render_baseline.py",
+  "src/docsubstrate/semantics.py",
+  "src/docsubstrate/snapshots.py",
+  "src/docsubstrate/structure_policies.py",
+  "src/docsubstrate/svg_path.py",
+  "src/docsubstrate/table_layout.py",
+  "src/docsubstrate/text_provenance.py",
+  "src/docsubstrate/engine_adapters/__init__.py",
+  "src/docsubstrate/engine_adapters/reportlab.py",
+  "src/docsubstrate/renderers/base.py",
+  "src/docsubstrate/renderers/encoded_image_store.py",
+  "src/docsubstrate/renderers/reportlab_canvas.py",
+  "pyproject.toml",
+  "README.md",
+  "SECURITY.md",
+  "examples/a2_sale_order_quickstart.py",
+  "examples/synthetic/public_alpha_sale_order.json",
+  "public-alpha/CLEAN-INSTALL.md",
+  "public-alpha/behavior/odoo19-sale-order-v1.json",
+  "public-alpha/odoo-harness/sale_order_smoke_record_native_only.py",
+  "tools/public_alpha_synthetic_demo.py",
+  "tools/run_public_alpha_odoo19_harness.py",
+  "LICENSE",
+  "NOTICE",
+  "SBOM.json",
+  ".gitignore",
+]
+# Hatchling force-includes its VCS exclusion file as sdist metadata; naming it
+# explicitly above keeps the artifact manifest complete rather than implicit.
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

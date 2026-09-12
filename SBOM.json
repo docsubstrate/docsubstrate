@@ -1,0 +1,93 @@
+{
+  "schema": "docsubstrate.a2-package-sbom/v1",
+  "generated_for": "docsubstrate core wheel/sdist, exact allowlist in pyproject.toml",
+  "publication_authorized": false,
+  "legal_conclusion": null,
+  "component": {
+    "name": "docsubstrate",
+    "version": "0.1.0a1",
+    "type": "library",
+    "requires_python": ">=3.12",
+    "license": "Apache-2.0",
+    "bundled_third_party_source": false,
+    "runtime_dependencies": []
+  },
+  "note": "This distribution's own declared runtime dependency list ([project] dependencies in pyproject.toml) is empty and was verified empty by grepping every allowlisted source file for a top-level `import reportlab`/`from reportlab`/`import PIL`/`from PIL`/`import psycopg2`/`import charset_normalizer` statement (none found).",
+  "external_components_relevant_but_not_bundled": [
+    {
+      "name": "Odoo Community",
+      "role": "required_external_runtime_and_API_host",
+      "license": "LGPL-3.0",
+      "used_by": "integrations/odoo/addons/docsubstrate_report (separate LGPL addon, not this core distribution)",
+      "bundled": false,
+      "version_evidence": {
+        "series": "19.0",
+        "source": "declared target series; not independently re-verified in this packaging pass"
+      }
+    },
+    {
+      "name": "ReportLab",
+      "role": "optional_PDF_rendering_engine_dependency",
+      "license": "BSD",
+      "used_by": "docsubstrate.renderers.reportlab_canvas / docsubstrate.engine_adapters.reportlab (included in the alpha wheel); the public Odoo assembler stages the certified ReportLab wheel in addon-local lib/",
+      "bundled": false,
+      "version_evidence": {
+        "certified_release_version": "5.0.1",
+        "certified_wheel_sha256": "1c36e6bb0e71780c72331eba60da7f602e8d4389a8723825af71342e49d791e8",
+        "stock_odoo_19_ambient_version": "4.1.0 (not accepted as the alpha renderer)"
+      }
+    },
+    {
+      "name": "Pillow",
+      "role": "ReportLab's_own_image_decoding_dependency",
+      "license": "MIT-CMU",
+      "used_by": "transitively via the separately installed ReportLab dependency",
+      "bundled": false,
+      "version_evidence": {
+        "stock_odoo_19_python_3_12_pin": "10.2.0",
+        "stock_odoo_19_pin_source": "docker run --rm odoo:19.0 python3 -c \"import PIL; print(PIL.__version__)\" -- run 2026-09-10, already-local image, no pull",
+        "this_repository_dev_extra_resolution": "12.3.0",
+        "dev_resolution_source": "uv sync --extra dev, this worktree, 2026-09-10"
+      }
+    },
+    {
+      "name": "charset-normalizer",
+      "role": "external_clean_install_dependency",
+      "license": "MIT",
+      "used_by": "pip's own dependency graph inside a clean install environment, not this project's own code",
+      "bundled": false,
+      "version_evidence": {
+        "stock_odoo_19_image_installed_version": "3.3.2",
+        "stock_odoo_19_source": "docker run --rm odoo:19.0 bash -lc \"pip list | grep -i charset-normalizer\" -- run 2026-09-10, already-local image, no pull"
+      }
+    },
+    {
+      "name": "psycopg2",
+      "role": "external_Odoo_database_dependency",
+      "license": "LGPL-3.0-or-later with an OpenSSL linking exception",
+      "used_by": "the Odoo host environment; provided to the addon, never imported by this core distribution",
+      "bundled": false,
+      "version_evidence": {
+        "stock_odoo_19_python_3_12_pin": "2.9.9",
+        "stock_odoo_19_pin_source": "docker run --rm odoo:19.0 bash -lc \"pip list | grep -i psycopg2\" -- run 2026-09-10, already-local image, no pull"
+      }
+    },
+    {
+      "name": "wkhtmltopdf (embeds a WebKit component)",
+      "role": "Odoo's_native_fallback_PDF_renderer_and_fidelity_reference",
+      "license": "component-specific GNU Library GPL terms in the referenced WebCore files",
+      "used_by": "Odoo host fallback only; not bundled and not invoked by a successful record-native alpha render",
+      "bundled": false,
+      "version_evidence": {
+        "referenced_revision": "c8a847338fac96fed89f40116d88468440891099",
+        "source": "fixed historical compatibility reference; this packaging pass did not independently reproduce the upstream component review"
+      }
+    }
+  ],
+  "not_a_claim": [
+    "not a completed legal notice/version review",
+    "not a right-to-license or ownership attestation",
+    "not a publication or distribution approval",
+    "not an independent-scanner-verified SBOM; no independent scanner result is asserted by this file"
+  ]
+}

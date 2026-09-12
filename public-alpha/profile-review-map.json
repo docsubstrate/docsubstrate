@@ -1,0 +1,472 @@
+{
+  "claims": {
+    "legal_clearance": null,
+    "publication_readiness": null
+  },
+  "generated_from": {
+    "spec": "public-alpha/odoo19-stylesheet-inputs.json",
+    "stylesheet_source_map": "public-alpha/odoo19-stylesheet-source-map.json",
+    "transformation": "public-alpha/sale-profile-transform.json"
+  },
+  "profile_constants": [
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "CSS_PX_PER_INCH"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "PX_PER_INCH"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "MM_PER_PX"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "MM_PER_REM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "DEFAULT_DPI"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "PRINTING_MINIMUM_SHRINK_FACTOR"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "PRINTING_MAXIMUM_SHRINK_FACTOR"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "MINIMUM_SHRINK_TO_FIT_SCALE"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "PT_TO_CSS_PX"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "SMART_SHRINK_PT_SCALE"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "GRID_COLUMNS"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "GUTTER_MM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "BOOTSTRAP_GUTTER_MM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "TOTALS_SPAN"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "INFO_COL"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "RIGHT_ALIGNED_OFFSET"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "REPORT_BODY_PADDING_CSS_MM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "PAPER_MARGIN_EPSILON_MM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "MAIN_TABLE_KIND"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "TOTALS_TABLE_KIND"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "MAIN_TABLE_COLUMN_WEIGHTS"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "TOTALS_TABLE_COLUMN_WEIGHTS"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "TOTALS_TABLE_WIDTH_FRACTION"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "TABLE_CELL_PAD_REM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "TABLE_SM_CELL_PAD_REM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "TABLE_SM_PAD_RATIO"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "TABLE_CELL_PAD_MM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "LEGACY_TABLE_OUTER_RGB"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "LEGACY_TABLE_INNER_RGB"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "BOX_STYLE_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "MARGIN_STYLE_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "PSEUDO_BEFORE_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "PSEUDO_AFTER_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "FONT_FACE_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "TYPE_STYLE_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "FONT_SIZE_PT"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "LINE_HEIGHT_MM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "LAYOUT_STYLE_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "FLOAT_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "CLEAR_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "BOX_PACK_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "TEXT_ALIGN_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "BORDER_STYLE_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "DISPLAY_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "OPACITY_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "PADDING_STYLE_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "FLEX_ITEM_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "INLINE_LEVEL_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "WHITE_SPACE_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "HIDDEN_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "TEXT_TRANSFORM_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "TABLE_STYLE_RULES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "HEADING_SIZES_REM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "DOCUMENT_TITLE_REM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "LINE_HEIGHT_RATIO"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "HEADING_LINE_HEIGHT_RATIO"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "LINE_HEIGHT_CLASSES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "LINK_COLOUR"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "BODY_TEXT_RGB"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "UNSTYLED_TEXT_RGB"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "BLOCK_RULE_PT"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "BLOCK_RULE_RGB"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "BLOCK_RULE_OPACITY"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "BORDER_DASH_MULTIPLIERS"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "UTILITY_BORDER_WIDTH_PX"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "UTILITY_RADIUS_REM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "UTILITY_TEXT_RGB"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "BUBBLE_CIRCLE_POSITION_PX"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "CELL_WIDTH_REM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "ELEMENT_MARGIN_BOTTOM_REM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "LOGO_CAPS_REM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "LOGO_CAPS_REM_BY_LAYOUT"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "LOGO_HEIGHTS_MM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "COL_RE"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "OFFSET_RE"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "SPACING_RE"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "LEGACY_SPACING_RE"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "WIDTH_RE"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "DISPLAY_RE"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "FONT_SIZE_RE"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "SNAIL_MAIL_ADDRESS_PADDING_PX"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "GAP_RE"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "SPACER_REM"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "_SIDES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "_LEGACY_SIDES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "SUPPORTED_CLASSES"
+    },
+    {
+      "basis": "public-synthetic-contract",
+      "contract": "tests/test_public_sale_runtime_contract.py",
+      "name": "INERT_CLASSES"
+    }
+  ],
+  "runtime_imported": false,
+  "schema": "docsubstrate.public-sale-profile-review-map/v1",
+  "theme_mappings": [
+    {
+      "basis": "public Odoo 19 template contract",
+      "name": "layout_table_style"
+    },
+    {
+      "basis": "pinned public stylesheet inputs",
+      "name": "table_skins"
+    },
+    {
+      "basis": "public Odoo 19 template contract",
+      "name": "company_overlay"
+    },
+    {
+      "basis": "pinned public stylesheet inputs",
+      "name": "informations_box"
+    },
+    {
+      "basis": "public Odoo 19 template contract",
+      "name": "layout_shapes"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "docsubstrate.public-sale-profile-transform/v1",
+  "input_contract": "public-alpha/odoo19-stylesheet-inputs.json",
+  "source_map": "public-alpha/odoo19-stylesheet-source-map.json",
+  "template": "public-alpha/sale-profile-template.py",
+  "output": "src/docsubstrate/odoo_report_profile.py",
+  "review_map": "public-alpha/profile-review-map.json",
+  "selector_exclude_fragments": [
+    "label_sheet",
+    "o_report_reception",
+    "o_report_stock_rule"
+  ],
+  "hand_compiled_assignments": [
+    "INLINE_LEVEL_RULES",
+    "WHITE_SPACE_RULES",
+    "HIDDEN_RULES",
+    "TABLE_STYLE_RULES"
+  ],
+  "transformation": {
+    "generated_assignments": "derive_layout_rules.py --emit against the two pinned CSS outputs",
+    "hand_compiled_filter": "remove rows whose selector contains an excluded fragment",
+    "runtime_evidence": "review mappings are emitted to review_map and never imported by runtime"
+  },
+  "claims": {
+    "legal_clearance": null,
+    "publication_readiness": null
+  }
+}

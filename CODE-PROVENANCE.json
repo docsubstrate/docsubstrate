@@ -1,0 +1,107 @@
+{
+  "schema": "docsubstrate.a2-code-review-evidence/v2",
+  "scope": "bounded Odoo 19 Community sale.report_saleorder native alpha",
+  "claims": {
+    "authorship": null,
+    "ownership": null,
+    "right_to_license": null,
+    "publication_authority": null
+  },
+  "external_behavior_references": {
+    "qtwebkit": {
+      "revision": "c8a847338fac96fed89f40116d88468440891099",
+      "url": "https://github.com/wkhtmltopdf/qt/tree/c8a847338fac96fed89f40116d88468440891099/src/3rdparty/webkit/Source/WebCore"
+    },
+    "odoo19_stylesheet_inputs": {
+      "contract": "public-alpha/odoo19-stylesheet-inputs.json",
+      "upstream_revision": "ca6a579d23798cd04a6023e6937d2bab8292a5c7",
+      "upstream_url": "https://github.com/odoo/odoo/commit/ca6a579d23798cd04a6023e6937d2bab8292a5c7",
+      "license_metadata": "LGPL-3.0-only",
+      "license_file_url": "https://raw.githubusercontent.com/odoo/odoo/ca6a579d23798cd04a6023e6937d2bab8292a5c7/LICENSE",
+      "license_file_sha256": "abc09dad5f84a76e1b0279237053cae16c03228ab27d8d467677054c2bd17eeb",
+      "extractor": "tools/extract_public_odoo19_stylesheets.py",
+      "source_map": {
+        "path": "public-alpha/odoo19-stylesheet-source-map.json",
+        "sha256": "ab6eb91c1ebf61d64b6a69b2e3aaa109efcfb628de9a01e936821712283ce716"
+      },
+      "inputs": [
+        {
+          "path": "tests/data/web.report_assets_common.min.css",
+          "sha256": "e156b4b3f98a5ac7067d3822ed3186989305586185e08e0b23251f795f2551ca"
+        },
+        {
+          "path": "tests/data/web.report_assets_pdf.min.css",
+          "sha256": "c985e35d6596d92503f93d4a5d6b2ae95cceefc736aa185b8ea4e390eb5b3038"
+        }
+      ]
+    }
+  },
+  "files": [
+    {
+      "path": "src/docsubstrate/image_assets.py",
+      "sha256": "f9b3b7b27bf805e7db93f44ba3d23092c47311bae62662bcc5ab5534c3141e83",
+      "review_basis": [
+        "tests/test_public_sale_runtime_contract.py",
+        "qtwebkit:c8a847338fac96fed89f40116d88468440891099:WebCore/loader/cache/CachedImage.cpp",
+        "qtwebkit:c8a847338fac96fed89f40116d88468440891099:WebCore/rendering/RenderImage.cpp"
+      ]
+    },
+    {
+      "path": "src/docsubstrate/ir.py",
+      "sha256": "a436c1ea1c07adc02a71d724fb187abb232672be100dcbe6c7a93a45082df89f",
+      "review_basis": [
+        "tests/test_public_sale_runtime_contract.py"
+      ]
+    },
+    {
+      "path": "src/docsubstrate/model.py",
+      "sha256": "2553de44c13de62483e993398a3026f3364887070d49cc6da3de74576ef06d94",
+      "review_basis": [
+        "tests/test_public_sale_runtime_contract.py"
+      ]
+    },
+    {
+      "path": "src/docsubstrate/odoo_report_profile.py",
+      "sha256": "211da4208fa847815b62d9579a1ef66b1cf2ca6090b6c371c152d4c79997e66e",
+      "review_basis": [
+        "tests/test_public_sale_runtime_contract.py",
+        "public-alpha/odoo19-stylesheet-inputs.json",
+        "input-sha256:e156b4b3f98a5ac7067d3822ed3186989305586185e08e0b23251f795f2551ca",
+        "input-sha256:c985e35d6596d92503f93d4a5d6b2ae95cceefc736aa185b8ea4e390eb5b3038"
+      ]
+    },
+    {
+      "path": "src/docsubstrate/odoo_report_theme.py",
+      "sha256": "e5b7456efdf4c7bdc5ae605d1ece2af66ae9cb7aa460119ecc0897b5c1263708",
+      "review_basis": [
+        "tests/test_public_sale_runtime_contract.py",
+        "public-alpha/profile-review-map.json"
+      ]
+    },
+    {
+      "path": "src/docsubstrate/page_planner.py",
+      "sha256": "b6a033bd35a5f05d4d233a80f5015123c352cbcdb4d50b1216f0fac6e233099c",
+      "review_basis": [
+        "tests/test_public_sale_runtime_contract.py"
+      ]
+    },
+    {
+      "path": "src/docsubstrate/renderers/reportlab_canvas.py",
+      "sha256": "5e3b67e51db651653f363a5eca6c3f03f5582902dc4bc37485c6b475e5ef9637",
+      "review_basis": [
+        "tests/test_public_sale_runtime_contract.py"
+      ]
+    }
+  ],
+  "synthetic_contracts": {
+    "path": "tests/test_public_sale_runtime_contract.py",
+    "sha256": "28814eeea6f59832503a12e831c2fea5d016e8311b4dc02fff07fa73309fa267",
+    "contract_count": 13,
+    "imports_denied_or_unshipped_modules": false
+  },
+  "limits": [
+    "This ledger records byte identities, public source coordinates, and executable contracts only.",
+    "It does not establish authorship, ownership, right-to-license, legal clearance, or publication authority.",
+    "It does not expand the bounded alpha beyond sale.report_saleorder or claim automatic fallback."
+  ]
+}
